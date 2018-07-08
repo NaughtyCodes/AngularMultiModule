@@ -1,0 +1,95 @@
+  <html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+/*
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart2);
+
+       function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+ */      
+      
+     
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ <script type="text/javascript">
+   google.charts.load('current', {packages:['corechart']});
+   google.charts.setOnLoadCallback(drawExample3);
+
+function drawExample3() {
+ var options = {
+   width: 400,
+   height: 240,
+   vAxis: {minValue:0, maxValue:100},
+   animation: {
+     duration: 100,
+     easing: 'in'
+   }
+ };
+
+ var chart = new google.visualization.LineChart(document.getElementById('example3-visualization'));
+ var data = new google.visualization.DataTable();
+ data.addColumn('string', 'x');
+ data.addColumn('number', 'y');
+ data.addRow(['100', 123]);
+ data.addRow(['700', 17]);
+ var button = document.getElementById('example3-b1');
+ 
+ function drawChart() {
+   // Disabling the button while the chart is drawing.
+   button.disabled = true;
+   google.visualization.events.addListener(chart, 'ready',
+       function() {
+         button.disabled = false;
+       });
+   chart.draw(data, options);
+ }
+
+ button.onclick = function() {
+   if (data.getNumberOfRows() > 5) {
+     data.removeRow(Math.floor(Math.random() * data.getNumberOfRows()));
+   }
+   // Generating a random x, y pair and inserting it so rows are sorted.
+   var x = Math.floor(Math.random() * 1000);
+   var y = Math.floor(Math.random() * 100);
+   var where = 0;
+   while (where < data.getNumberOfRows() && parseInt(data.getValue(where, 0)) < x) {
+     where++;
+   }
+   data.insertRows(where, [[x.toString(), y]]);
+   drawChart();
+ }
+ 
+ drawChart();
+ setInterval(button.onclick, 1000);
+ 
+}
+
+</script>
+
+  </head>
+  <body>
+    <!-- <div id="curve_chart" style="width: 900px; height: 500px"></div> -->
+    <div id="example3-visualization"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 400px; height: 240px;"><div aria-label="A chart." style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;"><svg width="400" height="240" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><clipPath id="_ABSTRACT_RENDERER_ID_0"><rect x="75" y="46" width="250" height="148"></rect></clipPath></defs><rect x="0" y="0" width="400" height="240" stroke="none" stroke-width="0" fill="#ffffff"></rect><g><rect x="336" y="46" width="53" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="336" y="46" width="53" height="11" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="362" y="55.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">y</text></g><path d="M336,51.5L358,51.5" stroke="#3366cc" stroke-width="2" fill-opacity="1" fill="none"></path></g></g><g><rect x="75" y="46" width="250" height="148" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(https://google-developers.appspot.com/chart/interactive/docs/animation_7fcc27da6ada74430fc7bb4f53e674d1.frame?hl=en#_ABSTRACT_RENDERER_ID_0)"><g><rect x="75" y="193" width="250" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="75" y="156" width="250" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="75" y="120" width="250" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="75" y="83" width="250" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="75" y="46" width="250" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="75" y="193" width="250" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g><g><path d="M137.75,80.49375L262.25,177.88125" stroke="#3366cc" stroke-width="2" fill-opacity="1" fill="none"></path></g></g><g></g><g><g><text text-anchor="middle" x="137.75" y="210.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">100</text></g><g><text text-anchor="middle" x="262.25" y="210.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#222222">700</text></g><g><text text-anchor="end" x="64" y="197.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="64" y="160.6" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">40</text></g><g><text text-anchor="end" x="64" y="123.85" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">80</text></g><g><text text-anchor="end" x="64" y="87.1" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">120</text></g><g><text text-anchor="end" x="64" y="50.35" font-family="Arial" font-size="11" stroke="none" stroke-width="0" fill="#444444">160</text></g></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>100</td><td>123</td></tr><tr><td>700</td><td>17</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 250px; left: 410px; white-space: nowrap; font-family: Arial; font-size: 11px;">y</div><div></div></div></div>
+<button id="example3-b1">Add and/or remove rows</button>
+    
+
+  </body>
+</html>
