@@ -12,5 +12,7 @@ Component to component Communication
 
 https://medium.com/dailyjs/3-ways-to-communicate-between-angular-components-a1e3f3304ecb
 https://codecraft.tv/courses/angular/custom-directives/hostlistener-and-hostbinding/
+
 https://stackblitz.com/edit/angular-communication-1?file=app%2Fside-bar-toggle%2Fside-bar-toggle.component.ts
+
 ==> https://stackoverflow.com/questions/41700724/angular2-hostlistener-how-can-i-target-an-element-can-i-target-based-on-class
