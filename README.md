@@ -18,3 +18,9 @@ https://stackblitz.com/edit/angular-communication-1?file=app%2Fside-bar-toggle%2
 https://stackoverflow.com/questions/41700724/angular2-hostlistener-how-can-i-target-an-element-can-i-target-based-on-class
 
 http://anasfirdousi.com/content-child-ngAfterContentInit-host-listener-host-binding-in-angular-2-4.html
+
+Example @Input and @Output
+
+https://dzone.com/articles/understanding-output-and-eventemitter-in-angular
+
+https://toddmotto.com/component-events-event-emitter-output-angular-2
