@@ -24,3 +24,7 @@ Example @Input and @Output
 https://dzone.com/articles/understanding-output-and-eventemitter-in-angular
 
 https://toddmotto.com/component-events-event-emitter-output-angular-2
+
+https://www.youtube.com/watch?v=xn1-ntNprH0&list=PLV1euzd9ziJKyvz3l54Pok3llkWyyTeoC&index=9
+
+
