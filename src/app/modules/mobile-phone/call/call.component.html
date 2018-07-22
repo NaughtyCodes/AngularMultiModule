@@ -1,0 +1,44 @@
+<!-- 
+<app-header [currentUser] = "currentUser" ></app-header>
+
+<p #callPara id="para" class="para" style="display:none">
+    Triggered from HeadComponent => call works!
+  </p>
+
+<app-message 
+  (valueChange1)='click($event)'
+  (valueChange2)='click($event)'
+  (valueChange3)='click($event)'
+  (valueChange4)='click($event)'
+>
+</app-message>
+
+<app-footer></app-footer>
+ -->
+<nav class="breadcrumb">
+  <ng-container *ngFor="let item of pathFlow; let last = last;">
+    <button
+      class="btn btn-link"
+      [class.active]="last"
+      [disabled]="last"
+      (click)="pathFlowCall(item)">{{item.name}}
+    </button>
+    <span *ngIf="!last"> / </span>
+  </ng-container>
+</nav>
+
+
+
+ <ngx-charts-tree-map
+ [view]="view"
+ [scheme]="colorScheme"
+ [results]="chartData"
+ (select)="onSelect($event)"
+>
+<ng-template #tooltipTemplate let-model="model">
+  <h1>
+    {{model.tooltip}}
+  </h1>
+  <h2>{{model.name}}: {{model.value}}</h2>
+</ng-template>
+</ngx-charts-tree-map>

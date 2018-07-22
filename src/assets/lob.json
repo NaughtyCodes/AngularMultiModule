@@ -1,0 +1,22 @@
+[
+    {
+      "name": "lob01",
+      "value": 10,
+      "tooltip":"Description Tooltip"
+    },
+    {
+      "name": "lob02",
+      "value": 20,
+      "tooltip":"Description Tooltip"
+    },
+    {
+      "name": "lob03",
+      "value": 30,
+      "tooltip":"Description Tooltip"
+    },
+    {
+      "name": "lob04",
+      "value": 40,
+      "tooltip":"Description Tooltip"
+    }
+  ]

@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Oracle",
+      "value": 60
+    },
+    {
+      "name": "MsSQL",
+      "value": 30
+    },
+    {
+      "name": "Sybase",
+      "value": 5
+    },
+    {
+      "name": "DB2",
+      "value": 10
+    }
+  ]

@@ -1,0 +1,36 @@
+<!-- <google-chart [data]="pieChartData"></google-chart> -->
+
+<h2>Striped Rows</h2>
+  <p>The .table-striped class adds zebra-stripes to a table: 
+    <button class='btn btn-primary' (click)="valueChanged1($event)">Click me1</button>
+    <button class='btn btn-primary' (click)="valueChanged2($event)">Click me2</button>
+    <button class='btn btn-primary' (click)="valueChanged3($event)">Click me3</button>
+    <button class='btn btn-primary' (click)="valueChanged4($event)">Click me4</button>
+  </p>   
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
