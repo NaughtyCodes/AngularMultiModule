@@ -34,6 +34,8 @@
  [scheme]="colorScheme"
  [results]="chartData"
  (select)="onSelect($event)"
+ [labelFormatting]="gdpLabelFormatting"
+ [valueFormatting]="currencyFormatting"
 >
 <ng-template #tooltipTemplate let-model="model">
   <h1>
