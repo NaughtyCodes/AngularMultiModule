@@ -43,7 +43,13 @@ export class CallComponent implements OnInit {
     
   }
 
-  
+  gdpLabelFormatting(c) {
+    return `<br/><small class="number-card-label">GDP Per Capita</small>`;
+  }
+
+  currencyFormatting(c): string {
+    return `\$${Math.round(c.value).toLocaleString()}`;
+  }
 
   // LOB > MNEMONIC > DATABASE > INSTANCE 
   initChart(key: String, pathFlow: any, urlParam: string){
