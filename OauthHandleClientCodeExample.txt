@@ -1,0 +1,23 @@
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://localhost:8080/oauth/token",
+  "method": "POST",
+  "headers": {
+    "content-type": "application/x-www-form-urlencoded",
+    "authorization": "Basic ZGV2Z2xhbi1jbGllbnQ6ZGV2Z2xhbi1zZWNyZXQ=",
+    "cache-control": "no-cache",
+    "postman-token": "32a49be6-8316-253b-9699-65ddaf9ffa05"
+  },
+  "data": {
+    "username": "Alex123",
+    "password": "password",
+    "grant_type": "password"
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+https://github.com/MainaWycliffe/angular-simple-token-basedauthentication-interceptor/blob/master/httpinteceptorclass.ts
